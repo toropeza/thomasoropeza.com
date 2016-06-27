@@ -16,19 +16,58 @@
 #
 import webapp2
 import os
+import jinja2
 from google.appengine.ext.webapp import template
 
+JINJA_ENVIRONMENT = jinja2.Environment(
+    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
+    extensions=['jinja2.ext.autoescape'],
+    autoescape=True)
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         path = os.path.join(os.path.dirname(__file__), 'homepage.html')
         self.response.out.write(template.render(path, {}))
+
 class PhotographyHandler(webapp2.RequestHandler):
     def get(self):
         path = os.path.join(os.path.dirname(__file__), 'photography.html')
         self.response.out.write(template.render(path, {}))
 
+class GalleryHandler(webapp2.RequestHandler):
+    def get(self):
+        template = JINJA_ENVIRONMENT.get_template('gallery.html')
+        urls = []
+        names = []
+        for url in os.listdir(os.path.join(os.path.dirname(__file__), "gallery/galleryphotos")):
+            urls.append(os.path.splitext(url)[0])
+
+        templateValues = {
+            # Files that are in a "static" directory cannot be referenced by os
+            'urls': urls
+
+        }
+        self.response.out.write(template.render(templateValues))
+
+class ProjectHandler(webapp2.RequestHandler):
+    def get(self):
+        template = JINJA_ENVIRONMENT.get_template('project.html')
+        project = self.request.get('p')
+        url = self.request.url
+        urls = []
+        for url in os.listdir(os.path.join(os.path.dirname(__file__), "gallery/projects/" + project)):
+            urls.append(os.path.splitext(url)[0])
+
+        templateValues = {
+            'project': project,
+            'urls': urls,
+            'fullURL':url
+        }
+        self.response.out.write(template.render(templateValues))
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/photo', PhotographyHandler)
+    ('/photo', PhotographyHandler),
+    ('/gallery', GalleryHandler),
+    ('/project', ProjectHandler)
 ], debug=True)

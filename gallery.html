@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="Thomas Oropeza">
+    <title>Thomas Oropeza</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Retina.js - Load first for faster HQ mobile images. -->
+    <script src="assets/js/plugins/retina/retina.min.js"></script>
+    <link href="assets/css/web-photography.css" rel="stylesheet" type="text/css">
+    <!-- Font Awesome -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--  Fonts  -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Metrophobic" />
+    <link href="assets/css/myCSS.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div role="navigation" class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li data-index="about">
+                        <a class="page-scroll nav-link" href="/photo">Home</a>
+                    </li>
+                    <li data-index="portfolio">
+                        <a class="page-scroll nav-link" href="/gallery">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </div>
+
+
+<div class="container">
+    <div class="row">
+         {% for url in urls %}
+        <a href="/project?p={{ url }}">
+        <div class="col-md-4">
+                <div class="gallery-wrapper">
+                    <div class="gallery-title">
+                        <p>{{ url }}</p>
+                    </div>
+                    <img class="img-responsive" src="/assets/img/gallery/galleryphotos_static/{{ url }}.jpg">
+                </div>
+        </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>

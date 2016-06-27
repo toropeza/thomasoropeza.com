@@ -20,21 +20,6 @@
 </head>
 
 <body id="page-top" cz-shortcut-listen="true">
-    <script>
-        $(document).ready(function () {
-            $("#product").hide();
-            $("#productButton").click(function () {
-                $("#adventure").hide();
-                $("#product").fadeIn();
-            });
-            $("#adventureButton").click(function () {
-                $("#product").hide();
-                $("#adventure").fadeIn();
-            });
-        });
-    </script>
-
-
     <!-- Navigation -->
     <!-- Note: navbar-default and navbar-inverse are both supported with this theme. -->
     <div role="navigation" class="navbar navbar-default">
@@ -57,13 +42,10 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li data-index="about">
-                        <a class="page-scroll nav-link" href="#about">About</a>
+                        <a class="page-scroll nav-link" href="#about">Home</a>
                     </li>
                     <li data-index="portfolio">
-                        <a class="page-scroll nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li data-index="contact">
-                        <a class="page-scroll nav-link" href="#portfolio">Contact</a>
+                        <a class="page-scroll nav-link" href="/gallery">Gallery</a>
                     </li>
                 </ul>
             </div>
@@ -81,72 +63,6 @@
             <hr class="colored">
         </div>
     </header>
-
-    <section data-index="portfolio" id="portfolio"  class="content" style="display:block;">
-    <div class="container" style="margin-bottom:5%;">
-        <br>
-        <div id="adventure">
-            <div class="container-fluid">
-                <div class="col-md-4">
-                    <img class="portfolio-img" src="assets/img/photography/Portfolio/portfolio-14.jpg" alt="Flower" width="100%" height="100%">
-                </div>
-                <div class="col-md-4">
-                    <img class="portfolio-img" src="assets/img/photography/Portfolio/portfolio-15.jpg" alt="Flower" width="100%" height="100%">
-                </div>
-                <div class="col-md-4">
-                    <img class="portfolio-img" src="assets/img/photography/Portfolio/portfolio-16.jpg" alt="Flower" width="100%" height="100%">
-                </div>
-            </div>
-            <div class="container-fluid">
-                <div class="col-md-4">
-                    <img class="portfolio-img" src="assets/img/photography/Portland-1.jpg" alt="Flower" width="100%" height="100%">
-                </div>
-                <div class="col-md-4">
-                    <img class="portfolio-img" src="assets/img/photography/Portland-2.jpg" alt="Flower" width="100%" height="100%">
-                </div>
-                <div class="col-md-4">
-                    <img class="portfolio-img" src="assets/img/photography/Portland-3.jpg" alt="Flower" width="100%" height="100%">
-                </div>
-            </div>
-            <div class="container-fluid">
-                <div class="col-md-4">
-                    <img class="portfolio-img" src="assets/img/photography/Portfolio/portfolio-1.jpg" alt="Flower" width="100%" height="100%">
-                </div>
-                <div class="col-md-4">
-                    <img class="portfolio-img" src="assets/img/photography/Portfolio/portfolio-2.jpg" alt="Flower" width="100%" height="100%">
-                </div>
-                <div class="col-md-4">
-                    <img class="portfolio-img" src="assets/img/photography/Portfolio/portfolio-5.jpg" alt="Flower" width="100%" height="100%">
-                </div>
-            </div>
-            <div class="container-fluid">
-                <div class="col-md-4">
-                    <img class="portfolio-img" src="assets/img/photography/Portfolio/portfolio-6.jpg" alt="Flower" width="100%" height="100%">
-                </div>
-
-                <div class="col-md-4">
-                    <img class="portfolio-img" src="assets/img/photography/Portfolio/portfolio-9.jpg" alt="Flower" width="100%" height="100%">
-                </div>
-
-
-                <div class="col-md-4">
-                    <img class="portfolio-img" src="assets/img/photography/Portfolio/portfolio-10.jpg" alt="Flower" width="100%" height="100%">
-                </div>
-            </div>
-            <div class="container-fluid">
-
-                <div class="col-md-4">
-                    <img class="portfolio-img" src="assets/img/photography/Portfolio/portfolio-11.jpg" alt="Flower" width="100%" height="100%">
-                </div>
-                <div class="col-md-4">
-                    <img class="portfolio-img" src="assets/img/photography/Portfolio/portfolio-12.jpg" alt="Flower" width="100%" height="100%">
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-    </section>
     
     
     <section data-index="about" id="about" class="about content">
@@ -160,9 +76,15 @@
                             <br>
                     <p>I am a computer science student based in San Francisco, CA. I love capturing moments through photography and exploring the beautiful scenery abound me.
                         <br>
-                        <br>Don't hesitate to contact me for any creative work!</p>
                     <div class="row">
                         <div class="col-lg-12">
+                            <h1>My Work</h1><br>
+                            <p>Take a look at some of my previous commisions in my photo gallery</p>
+                            <a href="/gallery"> <p>Photo Gallery</p></a>
+                        </div>
+                        <div class="col-lg-12">
+                            <h1>Contact Me</h1><br>
+                            <p>Don't hesitate to contact me for any creative work!</p>
                             <ul class="list-inline">
                                 <li><a target="_blank" href="https://500px.com/thomasoropeza"><i class="fa fa-500px fa-2x" aria-hidden="true"></i></a>
                                 </li>
@@ -174,32 +96,12 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-index="contact" id="contact" class="contact content">
-        <div class="container wow fade-in">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h1>Contact Me</h1>
-                            <br>
-                    <p>Don't hesitate to contact me for any creative work! I will get back to you as soon as I can.</p>
-                    <br>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <ul class="list-inline">
-                                <li><a target="_blank" href="mailto:thomasoropeza@gmail.com?Subject=Photography%20inquiry"><i class="fa fa-envelope-o fa-fw fa-4x"></i></a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    <br><br><br>
     <!-- Core Scripts -->
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
@@ -218,17 +120,6 @@
     <script src="assets/js/plugins/jqBootstrapValidation.js"></script>
     <!-- Vitality Theme Scripts -->
     <script src="assets/js/vitality.js"></script>
-
-
-    <script>
-        $(document).ready(function () {
-            $('.nav li').click(function () {
-                var index = $(this).attr('data-index');
-                $('.content').hide();
-                $('section[data-index="' + index + '"]').fadeIn();
-            });
-        });
-    </script>
 
 </body>
 

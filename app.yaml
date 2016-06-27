@@ -1,11 +1,15 @@
 application: thomasoropeza-resume
-version: 1
+version: test
 runtime: python27
 api_version: 1
 threadsafe: no
 
 handlers:
 - url: /
+  script: main.app
+- url: /gallery
+  script: main.app
+- url: /project
   script: main.app
 - url: /photo
   script: main.app
@@ -19,4 +23,4 @@ libraries:
 - name: webapp2
   version: "2.5.2"
 - name: jinja2
-  version: latest
+  version: "2.6"
