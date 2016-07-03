@@ -40,7 +40,8 @@ class GalleryHandler(webapp2.RequestHandler):
         urls = []
         names = []
         for url in os.listdir(os.path.join(os.path.dirname(__file__), "gallery/galleryphotos")):
-            urls.append(os.path.splitext(url)[0])
+            if url.endswith(".jpg"):
+                urls.append(os.path.splitext(url)[0])
 
         templateValues = {
             # Files that are in a "static" directory cannot be referenced by os
@@ -56,7 +57,10 @@ class ProjectHandler(webapp2.RequestHandler):
         url = self.request.url
         urls = []
         for url in os.listdir(os.path.join(os.path.dirname(__file__), "gallery/projects/" + project)):
-            urls.append(os.path.splitext(url)[0])
+            #skipping autgenerated mac files
+            if url.endswith(".jpg"):
+                urls.append(os.path.splitext(url)[0])
+
 
         templateValues = {
             'project': project,

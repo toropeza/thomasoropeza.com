@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html prefix="og: http://ogp.me/ns#">
 <head>
+    <title>{{ project }}</title>
+    <meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="Your Website Title" />
+	<meta property="og:description"   content="Your description" />
+	<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="">
-    <meta name="author" content="Thomas Oropeza">
-    <title>Thomas Oropeza</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -18,6 +21,15 @@
     <link href="assets/css/myCSS.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 <div role="navigation" class="navbar navbar-default">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -34,12 +46,12 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav">
                 <li class="hidden">
                     <a class="page-scroll" href="#page-top"></a>
                 </li>
                 <li data-index="about">
-                    <a class="page-scroll nav-link" href="/photo">Home</a>
+                    <a class="page-scroll nav-link" href="/photo">About</a>
                 </li>
                 <li data-index="portfolio">
                     <a class="page-scroll nav-link" href="/gallery">Gallery</a>
@@ -58,23 +70,19 @@
             <div class="fixed">
                 <div class="p-title">
                     <p>{{ project }}</p><br>
+                    <h4>by <a href="/photo">Thomas Oropeza</a><br>
+                    <a href="http://instagram.com/toropeza">@toropeza</a></h4>
                     <ul class="share-buttons">
                         <li>
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=http://thomasoropeza.com/project?p={{ project }}"
-                               target="_blank" title="Share on Facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//thomasoropeza.com/project?p={{ project }}&quote={{ project }}">
+                                <i class="fa fa-facebook-square fa-2x"></i>
+                            </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/intent/tweet?source=http://thomasoropeza.com/project?p={{ project }}&text=:%20"
-                               target="_blank" title="Tweet"><i class="fa fa-twitter-square fa-2x"></i></a></li>
-                        <li><a href="https://plus.google.com/share?url=http://thomasoropeza.com/project?p={{ project }}"
-                               target="_blank" title="Share on Google+"><i
-                                class="fa fa-google-plus-square fa-2x"></i></a></li>
-                        <li>
-                            <a href="http://www.tumblr.com/share?v=3&u=http://thomasoropeza.com/project?p={{ project }}&t=&s="
-                               target="_blank" title="Post to Tumblr"><i class="fa fa-tumblr-square fa-2x"></i></a></li>
-                        <li>
-                            <a href="http://pinterest.com/pin/create/button/?url=http://thomasoropeza.com/project?p={{ project }}&description="
-                               target="_blank" title="Pin it"><i class="fa fa-pinterest-square fa-2x"></i></a></li>
+                            <a href="https://twitter.com/home?status=http%3A//thomasoropeza.com/project?p={{ project }}">
+                                <i class="fa fa-twitter-square fa-2x"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -88,14 +96,5 @@
         </div>
     </div>
 </div>
-
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
 </body>
 </html>

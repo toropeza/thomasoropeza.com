@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Metrophobic" />
     <link href="assets/css/myCSS.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body id="page-top" cz-shortcut-listen="true">
 
     <div role="navigation" class="navbar navbar-default">
         <div class="container">
@@ -35,12 +35,12 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav">
                     <li class="hidden">
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li data-index="about">
-                        <a class="page-scroll nav-link" href="/photo">Home</a>
+                        <a class="page-scroll nav-link" href="/photo">About</a>
                     </li>
                     <li data-index="portfolio">
                         <a class="page-scroll nav-link" href="/gallery">Gallery</a>
@@ -54,20 +54,36 @@
 
 
 <div class="container">
+    <header>
+        <div class="intro-content">
+            <div class="brand-name">
+                <h1>Gallery</h1>
+
+            </div>
+            <hr class="colored">
+        </div>
+    </header>
     <div class="row">
          {% for url in urls %}
         <a href="/project?p={{ url }}">
-        <div class="col-md-4">
+        <div class="col-md-4 wrapped-col">
                 <div class="gallery-wrapper">
                     <div class="gallery-title">
                         <p>{{ url }}</p>
                     </div>
-                    <img class="img-responsive" src="/assets/img/gallery/galleryphotos_static/{{ url }}.jpg">
                 </div>
+            <div class="gallery-photo-wrapper">
+                <img class="img-responsive" src="/assets/img/gallery/galleryphotos_static/{{ url }}.jpg">
+            </div>
         </div>
         </a>
         {% endfor %}
     </div>
 </div>
+
+
+    <!-- Core Scripts -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
 </body>
 </html>
