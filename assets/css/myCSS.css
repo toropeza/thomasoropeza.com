@@ -61,10 +61,6 @@
 .fixed {
     position: fixed;
 }
-.navbar-default {
-    background-color: rgba(248, 248, 248, 0);
-    border-color: rgba(231, 231, 231, 0);
-}
 @media (max-width: 991px) {
 	.gallery-photo-wrapper:after {
         opacity:1;

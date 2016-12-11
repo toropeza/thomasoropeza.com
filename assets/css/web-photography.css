@@ -7,8 +7,36 @@
 }
 .brand-name {
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 4%;
     text-transform: uppercase;
+}
+.brand-name-subtitle {
+    margin-top:2%;
+}
+.active{
+
+}
+.photo-media {
+    margin-bottom:5%;
+}
+a {
+    color:#41c4ab;
+}
+a:hover{
+    color:#41c4ab;
+    text-decoration:none;
+}
+.gallery-button{
+    color: white;
+    background-color: #41c4ab;
+    padding: 3%;
+    border-radius: 35px;
+    font-size:15px;
+}
+.gallery-button:hover{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
 }
 .colored{
     border-top: 1px solid #41c4ab;
@@ -68,7 +96,7 @@ pre {
 /*      Navbar Styling     */
 /* navbar */
 .navbar-default {
-    background-color: rgba(248, 248, 248, 0);
+    background-color: #41c4ab;
     border-color: rgba(231, 231, 231, 0);
 }
 /* title */
@@ -81,22 +109,24 @@ pre {
 }
 /* link */
 .navbar-default .navbar-nav > li > a {
-    color: #777;
+    color: white;
+    font-weight: 400;
+    font-size:18px;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: #333;
+    color: white;
 }
 .navbar-default .navbar-nav > .active > a, 
 .navbar-default .navbar-nav > .active > a:hover, 
 .navbar-default .navbar-nav > .active > a:focus {
-    color: #555;
-    background-color: #E7E7E7;
+    color: white;
+    background-color: transparent;
 }
 .navbar-default .navbar-nav > .open > a, 
 .navbar-default .navbar-nav > .open > a:hover, 
 .navbar-default .navbar-nav > .open > a:focus {
-    color: #555;
+    color: white;
     background-color: #D5D5D5;
 }
 /* caret */
@@ -117,14 +147,14 @@ pre {
 }
 /* mobile version */
 .navbar-default .navbar-toggle {
-    border-color: #DDD;
+    border-color: white;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #DDD;
+    background-color: transparent;
 }
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #CCC;
+    background-color: white;
 }
 @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -142,7 +172,7 @@ pre {
         margin-bottom: 5%;
     }
     .navbar-default {
-        background-color: #F8F8F8;
-        border-color: #E7E7E7;
+        background-color: #41c4ab;
+        border-color: rgba(231, 231, 231, 0);
     }
 }

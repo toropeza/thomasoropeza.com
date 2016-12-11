@@ -19,6 +19,7 @@
     <!--  Fonts  -->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Metrophobic"/>
     <link href="assets/css/myCSS.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/web-photography.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <!-- Load Facebook SDK for JavaScript -->
@@ -51,7 +52,7 @@
                     <a class="page-scroll" href="#page-top"></a>
                 </li>
                 <li data-index="about">
-                    <a class="page-scroll nav-link" href="/photo">About</a>
+                    <a class="page-scroll nav-link" href="/photo">Home</a>
                 </li>
                 <li data-index="portfolio">
                     <a class="page-scroll nav-link" href="/gallery">Gallery</a>
@@ -70,19 +71,15 @@
             <div class="fixed">
                 <div class="p-title">
                     <p>{{ project }}</p><br>
-                    <h4>by <a href="/photo">Thomas Oropeza</a><br>
-                    <a href="http://instagram.com/toropeza">@toropeza</a></h4>
+                    <h4>Photographed<br>by <a href="/photo">Thomas Oropeza</a><br>
+                        <hr style="border-top: 1px solid #41c4ab;border-bottom: 1px solid #41c4ab;">
                     <ul class="share-buttons">
-                        <li>
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//thomasoropeza.com/project?p={{ project }}&quote={{ project }}">
-                                <i class="fa fa-facebook-square fa-2x"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/home?status=http%3A//thomasoropeza.com/project?p={{ project }}">
-                                <i class="fa fa-twitter-square fa-2x"></i>
-                            </a>
-                        </li>
+                        <li><a target="_blank" href="https://instagram.com/toropeza/"><i class="fa fa-instagram fa-fw fa-2x"></i></a>
+                                </li>
+                    <li><a target="_blank" href="http://www.facebook.com/thomasoropezaphoto"><i class="fa fa-facebook fa-fw fa-2x"></i></a>
+                            </li>
+                    <li><a target="_blank" href="mailto:thomasoropeza@gmail.com?Subject=Photography%20inquiry"><i class="fa fa-envelope-o fa-fw fa-2x"></i></a>
+                    </li>
                     </ul>
                 </div>
             </div>
@@ -96,5 +93,24 @@
         </div>
     </div>
 </div>
+
+ <!-- Core Scripts -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <!-- Plugin Scripts -->
+    <script src="assets/js/plugins/jquery.easing.min.js"></script>
+    <script src="assets/js/plugins/classie.js"></script>
+    <script src="assets/js/plugins/cbpAnimatedHeader.js"></script>
+    <script src="assets/js/plugins/owl-carousel/owl.carousel.js"></script>
+    <script src="assets/js/plugins/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/plugins/background/core.js"></script>
+    <script src="assets/js/plugins/background/transition.js"></script>
+    <script src="assets/js/plugins/background/background.js"></script>
+    <script src="assets/js/plugins/jquery.mixitup.js"></script>
+    <script src="assets/js/plugins/wow/wow.min.js"></script>
+    <script src="assets/js/contact_me.js"></script>
+    <script src="assets/js/plugins/jqBootstrapValidation.js"></script>
+    <!-- Vitality Theme Scripts -->
+    <script src="assets/js/vitality.js"></script>
 </body>
 </html>
