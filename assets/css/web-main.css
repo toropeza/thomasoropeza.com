@@ -19,6 +19,15 @@ section {
 .bg-gray {
   background-color: #f5f5f5;
 }
+.bg-lgreen{
+  background-color: #e0fff3;
+}
+.bg-lpurple{
+  background-color: #efe0ff;
+}
+.bg-lyellow{
+  background-color: #f9f7cf;
+}
 .bg-dark {
   color: white;
   background-color: #222222;
